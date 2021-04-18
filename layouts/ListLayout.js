@@ -11,7 +11,6 @@ export default function ListLayout({ posts, title }) {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
-
   return (
     <>
       <div className="divide-y">

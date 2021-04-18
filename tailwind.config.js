@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         blue: colors.lightBlue,
+        pink: colors.pink,
         code: {
           green: '#b5f4a5',
           yellow: '#ffe484',
@@ -37,11 +38,11 @@ module.exports = {
           css: {
             color: theme('colors.gray.700'),
             a: {
-              color: theme('colors.blue.500'),
+              color: theme('colors.pink.500'),
               '&:hover': {
-                color: theme('colors.blue.600'),
+                color: theme('colors.pink.600'),
               },
-              code: { color: theme('colors.blue.400') },
+              code: { color: theme('colors.pink.400') },
             },
             h1: {
               fontWeight: '700',
@@ -94,11 +95,11 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.blue.500'),
+              color: theme('colors.pink.500'),
               '&:hover': {
-                color: theme('colors.blue.400'),
+                color: theme('colors.pink.400'),
               },
-              code: { color: theme('colors.blue.400') },
+              code: { color: theme('colors.pink.400') },
             },
             h1: {
               fontWeight: '700',

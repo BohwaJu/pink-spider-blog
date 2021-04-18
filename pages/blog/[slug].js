@@ -38,7 +38,6 @@ export default function Blog({ post, prev, next }) {
   const content = hydrate(mdxSource, {
     components: MDXComponents,
   })
-
   return (
     <>
       {frontMatter.draft !== true ? (

@@ -12,7 +12,22 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ children, frontMatter, next, prev }) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, fileName, date, title, tags, author } = frontMatter
+
+  const renderImage = (author) => {
+    const AUTHOR = author.toUpperCase()
+    switch (AUTHOR) {
+      case 'RUMI':
+        return siteMetdata.imageRumi
+        break
+      case 'RAY':
+        return siteMetdata.imageRay
+        break
+      default:
+        console.log('please write author in md file')
+        return siteMetdata.image
+    }
+  }
 
   return (
     <SectionContainer>
@@ -45,15 +60,19 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               <dd>
                 <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
                   <li className="flex items-center space-x-2">
-                    <img src={siteMetdata.image} alt="avatar" className="w-10 h-10 rounded-full" />
+                    <img
+                      src={renderImage(author)}
+                      alt="avatar"
+                      className="w-10 h-10 rounded-full"
+                    />
                     <dl className="text-sm font-medium leading-5 whitespace-nowrap">
                       <dt className="sr-only">Name</dt>
-                      <dd className="text-gray-900 dark:text-gray-100">{siteMetdata.author}</dd>
+                      <dd className="text-gray-900 dark:text-gray-100">{author}</dd>
                       <dt className="sr-only">Twitter</dt>
                       <dd>
                         <Link
                           href={siteMetdata.twitter}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                          className="text-pink-500 hover:text-pink-600 dark:hover:text-pink-400"
                         >
                           {siteMetdata.twitter.replace('https://twitter.com/', '@')}
                         </Link>
@@ -94,7 +113,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Previous Article
                         </h2>
-                        <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                        <div className="text-pink-500 hover:text-pink-600 dark:hover:text-pink-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
@@ -104,7 +123,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Next Article
                         </h2>
-                        <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                        <div className="text-pink-500 hover:text-pink-600 dark:hover:text-pink-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
@@ -115,7 +134,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               <div className="pt-4 xl:pt-8">
                 <Link
                   href="/blog"
-                  className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                  className="text-pink-500 hover:text-pink-600 dark:hover:text-pink-400"
                 >
                   &larr; Back to the blog
                 </Link>

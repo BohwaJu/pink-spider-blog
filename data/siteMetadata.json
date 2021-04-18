@@ -1,11 +1,13 @@
 {
-  "title": "Next.js Starter Blog",
-  "author": "Tails Azimuth",
-  "headerTitle": "TailwindBlog",
-  "description": "A blog created with Next.js and Tailwind.css",
-  "language": "en-us",
-  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
+  "title": "PinkSpider Blog",
+  "author": "PinkSpider",
+  "headerTitle": "PinkSpider", 
+  "description": "Pink Spider's Tech Blog",
+  "language": "ko",
+  "siteUrl": "https://pink-spider.io",
   "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  "imageRay": "/static/images/avatar_ray.png",
+  "imageRumi": "/static/images/avatar_rumi.png",
   "image": "/static/images/avatar.png",
   "socialBanner": "/static/images/twitter-card.png",
   "email": "address@yoursite.com",
@@ -14,5 +16,5 @@
   "facebook": "https://facebook.com",
   "youtube": "https://youtube.com",
   "linkedin": "https://www.linkedin.com",
-  "locale": "en-US"
+  "locale": "ko"
 }
