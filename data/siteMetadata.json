@@ -9,6 +9,8 @@
   "imageRay": "/static/images/avatar_ray.png",
   "imageRumi": "/static/images/avatar_rumi.png",
   "image": "/static/images/avatar.png",
+  "introduceRumi":"https://www.notion.so/rumigarden/Who-am-I-c618630acbb04e7caf9a69e3d4b4ed99",
+  "introduceRay":"#",
   "socialBanner": "/static/images/twitter-card.png",
   "email": "address@yoursite.com",
   "github": "https://github.com",

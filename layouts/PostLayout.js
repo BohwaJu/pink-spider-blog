@@ -28,6 +28,20 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
         return siteMetdata.image
     }
   }
+  const renderPersonalPage = (author) => {
+    const AUTHOR = author.toUpperCase()
+    switch (AUTHOR) {
+      case 'RUMI':
+        return siteMetdata.introduceRumi
+        break
+      case 'RAY':
+        return siteMetdata.introduceRay
+        break
+      default:
+        console.log('default link')
+        return siteMetdata.youtube
+    }
+  }
 
   return (
     <SectionContainer>
@@ -41,7 +55,8 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetdata.locale, postDateTemplate)}
+                      {date}
+                      {/* {new Date(date).toLocaleDateString(siteMetdata.locale, postDateTemplate)} */}
                     </time>
                   </dd>
                 </div>
@@ -68,13 +83,13 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     <dl className="text-sm font-medium leading-5 whitespace-nowrap">
                       <dt className="sr-only">Name</dt>
                       <dd className="text-gray-900 dark:text-gray-100">{author}</dd>
-                      <dt className="sr-only">Twitter</dt>
+                      <dt className="sr-only">Link</dt>
                       <dd>
                         <Link
-                          href={siteMetdata.twitter}
+                          href={renderPersonalPage(author)}
                           className="text-pink-500 hover:text-pink-600 dark:hover:text-pink-400"
                         >
-                          {siteMetdata.twitter.replace('https://twitter.com/', '@')}
+                          {`Homepage`}
                         </Link>
                       </dd>
                     </dl>
@@ -85,11 +100,12 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
+                {/* <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link> */}
+                If you find an error, please send it by e-mail. Thank you!
               </div>
             </div>
             <footer>

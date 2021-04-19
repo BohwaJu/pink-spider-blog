@@ -7,17 +7,17 @@
       <language>ko</language>
       <managingEditor>address@yoursite.com (PinkSpider)</managingEditor>
       <webMaster>address@yoursite.com (PinkSpider)</webMaster>
-      <lastBuildDate>Sun, 18 Apr 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Mon, 19 Apr 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pink-spider.io/index.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://pink-spider.io/blog/template</guid>
-    <title>Template</title>
-    <link>https://pink-spider.io/blog/template</link>
-    <description>The Time Traveller (for so it will be convenient to speak of him) was expounding a recondite matter to us. His pale grey eyes shone and twinkled, and his usually pale face was flushed and animated...</description>
-    <pubDate>Sun, 18 Apr 2021 00:00:00 GMT</pubDate>
+    <guid>https://pink-spider.io/blog/2021_04_19_rendering</guid>
+    <title>브라우저 렌더링 과정을 간단하게 알아보자</title>
+    <link>https://pink-spider.io/blog/2021_04_19_rendering</link>
+    <description>렌더링 과정을 간단하게 설명한다. 주소창에 URL을 입력하고, DNS를 조회한다. HTTP메시지를 만들어 서버에 요청을 보내고, 서버로부터 응답을 받는다. HTML 파싱 및 DOM Tree를 생성한다.CSS파싱 및 CSSOM Tree를 생성한다. DOM + CSSOM 으로 Render Tree를 생성하고, Layout Paint 과정을 거친다.</description>
+    <pubDate>Mon, 19 Apr 2021 00:00:00 GMT</pubDate>
     <author>address@yoursite.com (PinkSpider)</author>
-    <category>css</category><category>book</category><category>reflection</category>
+    <category>Computer</category><category>Rendering</category>
   </item>
 
     </channel>
